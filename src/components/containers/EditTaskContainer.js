@@ -80,13 +80,15 @@ class EditTaskContainer extends Component {
       return <Navigate to={`/task/${this.state.redirectId}`} />;
     }
     return (
-      <div>
+      <div style={{backgroundColor:"#99ff99",color:"blck",fontFamily:"garamond",margin:0,padding:280}}>
         <form
           style={{ textAlign: "center" }}
           onSubmit={(e) => this.handleSubmit(e)}
         >
           <label style={{ color: "#11153e", fontWeight: "bold" }}>
-            Description:{" "}
+            Description:
+            <br />
+            {" "}
           </label>
           <input
             type="text"
@@ -97,7 +99,9 @@ class EditTaskContainer extends Component {
           <br />
 
           <label style={{ color: "#11153e", fontWeight: "bold" }}>
-            Priority Level:{" "}
+            Priority Level:
+            <br />
+            {" "}
           </label>
           <input
             type="text"
@@ -108,7 +112,9 @@ class EditTaskContainer extends Component {
           <br />
 
           <label style={{ color: "#11153e", fontWeight: "bold" }}>
-            Completion Status:{" "}
+            Completion Status:
+            <br />
+            {" "}
           </label>
           <input
             type="text"
@@ -119,7 +125,9 @@ class EditTaskContainer extends Component {
           <br />
 
           <label style={{ color: "#11153e", fontWeight: "bold" }}>
-            employeeId:{" "}
+            employeeId:
+            <br />
+            {" "}
           </label>
           <input
             type="text"
@@ -141,9 +149,7 @@ class EditTaskContainer extends Component {
           ))}
         </div>
         <div>
-          <button>
-            <Link to={"/"}>Home Page</Link>
-          </button>
+            <Link style={{display:"block",backgroundColor:"#77ff99",color:"blck",fontFamily:"garamond",margin:50,padding:20}} to={"/"}>Home Page</Link>
         </div>
       </div>
     );

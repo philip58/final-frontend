@@ -33,15 +33,15 @@ class EmployeeContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{backgroundColor:"#77ff99",color:"blck",fontFamily:"garamond",margin:0,padding:170}}>
         <EmployeeView
           employee={this.props.employee}
           editTask={this.props.editTask}
           allTasks={this.props.allTasks}
         />
-        <button>
-          <Link to={"/"}>Home Page </Link>
-        </button>
+        <br />
+        <br />
+          <Link style={{display:"block",border:50,backgroundColor:"#55ff99",borderRadius:30,padding:30}} to={"/"}>Home Page </Link>
       </div>
     );
   }

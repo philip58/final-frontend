@@ -7,17 +7,12 @@ const NewTaskView = (props) => {
       <div className="formContainer">
         <div className="formTitle">
           <h2
-            style={{
-              fontWeight: "bold",
-              fontFamily: "Courier, sans-serif",
-              fontSize: "20px",
-              color: "#11153e",
-            }}
+            style={{backgroundColor:"#99ff99",color:"blck",fontFamily:"garamond",margin:0,padding:40}}
           >
             New Task
           </h2>
         </div>
-        <form style={{ textAlign: "center" }} onSubmit={(e) => handleSubmit(e)}>
+        <form style={{backgroundColor:"#77ff99",color:"blck",fontFamily:"garamond",margin:0,padding:40}} onSubmit={(e) => handleSubmit(e)}>
           <label style={{ color: "#11153e", fontWeight: "bold" }}>
             Description:{" "}
           </label>
@@ -57,11 +52,10 @@ const NewTaskView = (props) => {
         </form>
         {error !== "" && <p>{error}</p>}
       </div>
-      <div>
-        <button>
+      <div style={{backgroundColor:"#55ff99",color:"blck",fontFamily:"garamond",margin:0,padding:40}}>
             <Link to={"/"}>Home Page</Link>
-        </button>
       </div>
+      <div style={{backgroundColor:"#33ff99",color:"blck",fontFamily:"garamond",margin:0,padding:200}}></div>
     </div>
   );
 };
