@@ -51,6 +51,17 @@ const NewEmployeeView = (props) => {
           <br />
           <br />
 
+          <label style={{ color: "#11153e", fontWeight: "bold" }}>
+            Id:{" "}
+          </label>
+          <input
+            type="number"
+            name="id"
+            onChange={(e) => handleChange(e)}
+          />
+          <br />
+          <br />
+
           <button type="submit">Submit</button>
           <br />
           <br />

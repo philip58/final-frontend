@@ -39,7 +39,7 @@ const NewTaskView = (props) => {
             employeeId:{" "}
           </label>
           <input
-            type="text"
+            type="number"
             name="employeeId"
             onChange={(e) => handleChange(e)}
           />
