@@ -149,7 +149,7 @@ class EditTaskContainer extends Component {
           ))}
         </div>
         <div>
-            <Link style={{display:"block",backgroundColor:"#77ff99",color:"blck",fontFamily:"garamond",margin:50,padding:20}} to={"/"}>Home Page</Link>
+            <Link style={{display:"block",backgroundColor:"#77ff99",color:"blck",fontFamily:"garamond",margin:50,padding:20,borderRadius: 30}} to={"/"}>Home Page</Link>
         </div>
       </div>
     );

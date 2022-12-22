@@ -31,6 +31,11 @@ const AllEmployeesView = (props) => {
         );
       })}
       </div>
+      <div>
+              <Link style={{backgroundColor:"#55ff99",color:"black",fontFamily:"garamond",margin:0,padding:40,display:"inline-block"}} to={`/newemployee`}>
+                Add New Employee
+              </Link>
+            </div>
     </div>
   );
 };
