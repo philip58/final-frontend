@@ -1,46 +1,51 @@
 import { Link } from "react-router-dom";
-const NewTaskView = (props) => {
+const NewEmployeeView = (props) => {
   const { handleChange, handleSubmit, error } = props;
 
   return (
-    <div className="root">
+    <div style={{backgroundColor:"#99ff99",color:"blck",fontFamily:"garamond",margin:0,padding:40}} className="root">
       <div className="formContainer">
         <div className="formTitle">
           <h2
-            style={{backgroundColor:"#99ff99",color:"blck",fontFamily:"garamond",margin:0,padding:40}}
+            style={{
+              fontWeight: "bold",
+              fontFamily: "Courier, sans-serif",
+              fontSize: "20px",
+              color: "#11153e",
+            }}
           >
-            New Task
+            New Employee
           </h2>
         </div>
-        <form style={{backgroundColor:"#77ff99",color:"blck",fontFamily:"garamond",margin:0,padding:40}} onSubmit={(e) => handleSubmit(e)}>
+        <form style={{ textAlign: "center" }} onSubmit={(e) => handleSubmit(e)}>
           <label style={{ color: "#11153e", fontWeight: "bold" }}>
-            Description:{" "}
+            First Name:{" "}
           </label>
           <input
             type="text"
-            name="description"
+            name="firstname"
             onChange={(e) => handleChange(e)}
           />
           <br />
           <br />
 
           <label style={{ color: "#11153e", fontWeight: "bold" }}>
-            Priority Level:{" "}
+            Last Name:{" "}
           </label>
           <input
             type="text"
-            name="prioritylevel"
+            name="lastname"
             onChange={(e) => handleChange(e)}
           />
           <br />
           <br />
 
           <label style={{ color: "#11153e", fontWeight: "bold" }}>
-            employeeId:{" "}
+            Department:{" "}
           </label>
           <input
             type="text"
-            name="employeeId"
+            name="department"
             onChange={(e) => handleChange(e)}
           />
           <br />
@@ -52,12 +57,13 @@ const NewTaskView = (props) => {
         </form>
         {error !== "" && <p>{error}</p>}
       </div>
-      <div style={{backgroundColor:"#55ff99",color:"blck",fontFamily:"garamond",margin:0,padding:40}}>
-            <Link to={"/"}>Home Page</Link>
+      <div style={{display:"block",border:50,backgroundColor:"#55ff99",borderRadius:30,padding:30}}>
+        <Link to={"/"}>Home Page</Link>
       </div>
-      <div style={{backgroundColor:"#33ff99",color:"blck",fontFamily:"garamond",margin:0,padding:200}}></div>
+      <div style={{backgroundColor:"#99ff99",color:"blck",fontFamily:"garamond",margin:0,padding:220}}
+      ></div>
     </div>
   );
 };
 
-export default NewTaskView;
+export default NewEmployeeView;

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const AllEmployeesView = (props) => {
   if (!props.allEmployees.length) {
     return (
-      <div>
+      <div style={{backgroundColor:"#99ff99",color:"blck",fontFamily:"garamond",margin:0,padding:40}}>
         <p>There are no employees.</p>
         <Link to={"/"}> Home Page </Link>
       </div>
@@ -13,17 +13,17 @@ const AllEmployeesView = (props) => {
 
   return (
 
-    <div>
+    <div style={{backgroundColor:"#99ff99",color:"black",fontFamily:"garamond",margin:0,padding:40}}>
         <Link to={'/'}> 
-        <button> Home Page </button>
+        <h2 style={{backgroundColor:"#55ff99",fontFamily:"garamond",marginInline:50,padding:50}}> Home Page </h2>
         </Link>
         <div>
       {props.allEmployees.map((employee) => {
         let name = employee.firstname + " " + employee.lastname;
         return (
-          <div key={employee.id}>
+          <div style={{backgroundColor:"#77ff99",color:"black",fontFamily:"garamond",margin:50,padding:30}} key={employee.id}>
             <Link to={`/employee/${employee.id}`}>
-              <h1>{name}</h1>
+              <h2>{name}</h2>
             </Link>
 
             <p>{employee.department}</p>
@@ -31,6 +31,11 @@ const AllEmployeesView = (props) => {
         );
       })}
       </div>
+      <div>
+              <Link style={{backgroundColor:"#55ff99",color:"black",fontFamily:"garamond",margin:0,padding:40,display:"inline-block"}} to={`/newemployee`}>
+                Add New Employee
+              </Link>
+            </div>
     </div>
   );
 };

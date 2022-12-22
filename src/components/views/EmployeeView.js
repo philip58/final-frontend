@@ -10,7 +10,7 @@ const EmployeeView = (props) => {
   );
 
   return (
-    <div>
+    <div style={{backgroundColor:"#99ff99",color:"blck",fontFamily:"garamond",margin:0,padding:40}}>
       <h1>{employee.firstname}</h1>
       <h3>{employee.department}</h3>
       <div
@@ -20,7 +20,7 @@ const EmployeeView = (props) => {
           justifyContent: "space-evenly",
         }}
       >
-        <div>
+        <div style={{backgroundColor:"#77ff99",color:"blck",fontFamily:"garamond",margin:0,padding:40}}>
           Assigned tasks:
           {assignedTasks.map((task) => {
             return (
@@ -31,13 +31,13 @@ const EmployeeView = (props) => {
                 <button
                   onClick={() => editTask({ id: task.id, employeeId: null })}
                 >
-                  x
+                  Remove Task
                 </button>
               </div>
             );
           })}
         </div>
-        <div>
+        <div style={{backgroundColor:"#77ff99",color:"blck",fontFamily:"garamond",margin:0,padding:40}}>
           Available tasks:
           {availableTasks.map((task) => {
             return (
@@ -50,7 +50,7 @@ const EmployeeView = (props) => {
                     editTask({ id: task.id, employeeId: employee.id })
                   }
                 >
-                  +
+                  Add Task
                 </button>
               </div>
             );
