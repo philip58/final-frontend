@@ -11,6 +11,7 @@ class NewEmployeeContainer extends Component {
       firstname: "",
       lastname: "",
       department: "",
+      id: "",
       redirect: false,
       redirectId: null,
       error: "",
@@ -33,10 +34,15 @@ class NewEmployeeContainer extends Component {
       this.setState({ error: "Name field is required" });
       return;
     }
+    if (this.state.id === "") {
+        this.setState({ error: "Id field is required" });
+        return;
+      }
     let employee = {
       firstname: this.state.firstname,
       lastname: this.state.lastname,
       department: this.state.department,
+      id: this.state.id
     };
 
     let newEmployee = await this.props.addEmployee(employee);
