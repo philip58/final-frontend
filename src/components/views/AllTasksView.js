@@ -4,11 +4,14 @@ const AllTasksView = (props) => {
   let { tasks, deleteTask } = props;
   if (!tasks.length) {
     return (
-      <div style={{backgroundColor:"#99ff99",color:"blck",fontFamily:"garamond",margin:0,padding:40}}>
+      <div style={{backgroundColor:"#99ff99",color:"blck",fontFamily:"garamond",margin:0,padding:400}}>
         <p>There are no tasks.</p>
         <Link to={`/newtask`}>
-          <button>Add New Task</button>
+          Add New Task
         </Link>
+        <br />
+        <br />
+        <Link to={"/"}> Home Page </Link>
       </div>
     );
   }
@@ -22,16 +25,16 @@ const AllTasksView = (props) => {
             <Link to={`/task/${task.id}`}>
               <h1>{description}</h1>
             </Link>
-            <button onClick={() => deleteTask(task.id)}>Delete</button>
+            <button onClick={() => deleteTask(task.id)}>Delete Task</button>
           </div>
         );
       })}
       <br />
       <br />
-      <Link style={{backgroundColor:"#77ff99",color:"blck",fontFamily:"garamond",margin:50,padding:30}} to={`/newtask`}>
+      <Link style={{backgroundColor:"#77ff99",color:"blck",fontFamily:"garamond",margin:50,padding:30,display:"inline-block"}} to={`/newtask`}>
         Add New Task
       </Link>
-      <Link style={{backgroundColor:"#77ff99",color:"blck",fontFamily:"garamond",margin:50,padding:30}} to={"/"}>
+      <Link style={{backgroundColor:"#77ff99",color:"blck",fontFamily:"garamond",margin:50,padding:30,display:"inline-block"}} to={"/"}>
         Home Page
       </Link>
       <div style={{backgroundColor:"#99ff99",color:"blck",fontFamily:"garamond",margin:0,padding:150}}></div>
