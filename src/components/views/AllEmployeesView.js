@@ -24,6 +24,12 @@ const AllEmployeesView = (props) => {
     <div style={{backgroundColor:"#99ff99",color:"black",fontFamily:"garamond",margin:0,padding:40}}>
         <Link to={'/'}> 
         <h2 style={{backgroundColor:"#55ff99",fontFamily:"garamond",marginInline:50,padding:50}}> Home Page </h2>
+        <div>
+          <br />
+              <Link style={{display:"inline-block",backgroundColor:"#66ff99",color:"black",fontFamily:"garamond",margin:0,padding:40,}} to={`/newemployee`}>
+                Add New Employee
+              </Link>
+            </div>
         </Link>
         <div>
       {props.allEmployees.map((employee) => {
